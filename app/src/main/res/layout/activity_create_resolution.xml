@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateResolutionActivity">
+
+    <TextView
+        android:id="@+id/resolution_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/resolution_header"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/resolution_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/name"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resolution_header" />
+
+    <TextView
+        android:id="@+id/resolution_activity_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/activity_col"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resolution_name_text" />
+
+    <TextView
+        android:id="@+id/resolution_date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/date_starting"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resolution_activity_text" />
+
+    <TextView
+        android:id="@+id/resolution_frequency_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/frequency"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resolution_date_text" />
+
+    <TextView
+        android:id="@+id/resolution_goal_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/goal"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resolution_frequency_text" />
+
+    <EditText
+        android:id="@+id/resolution_name"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/resolution_name_text"
+        app:layout_constraintStart_toStartOf="@+id/resolution_activty"
+        app:layout_constraintTop_toTopOf="@+id/resolution_name_text" />
+
+    <EditText
+        android:id="@+id/resolution_date"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="@+id/resolution_date_text"
+        app:layout_constraintStart_toEndOf="@+id/resolution_date_text"
+        app:layout_constraintTop_toTopOf="@+id/resolution_date_text" />
+
+    <EditText
+        android:id="@+id/resolution_goal"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toBottomOf="@+id/resolution_goal_text"
+        app:layout_constraintStart_toStartOf="@+id/resolution_date"
+        app:layout_constraintTop_toTopOf="@+id/resolution_goal_text" />
+
+    <Spinner
+        android:id="@+id/resolution_activty"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/resolution_activity_text"
+        app:layout_constraintStart_toStartOf="@+id/resolution_date"
+        app:layout_constraintTop_toTopOf="@+id/resolution_activity_text" />
+
+    <Spinner
+        android:id="@+id/resolution_frequency"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/resolution_frequency_text"
+        app:layout_constraintStart_toStartOf="@+id/resolution_date"
+        app:layout_constraintTop_toTopOf="@+id/resolution_frequency_text" />
+
+    <Spinner
+        android:id="@+id/resolution_unit"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:spinnerMode="dropdown"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toBottomOf="@+id/resolution_goal"
+        app:layout_constraintStart_toEndOf="@+id/resolution_goal"
+        app:layout_constraintTop_toTopOf="@+id/resolution_goal" />
+
+    <Button
+        android:id="@+id/resolution_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resolution_goal" />
+
+    <TextView
+        android:id="@+id/resolution_new_activity_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="128dp"
+        android:text="Custom activity:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resolution_save" />
+
+    <EditText
+        android:id="@+id/resolution_new_activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/resolution_new_activity_text"
+        app:layout_constraintEnd_toStartOf="@+id/resolution_new_activity_create"
+        app:layout_constraintStart_toEndOf="@+id/resolution_new_activity_text"
+        app:layout_constraintTop_toTopOf="@+id/resolution_new_activity_text" />
+
+    <Button
+        android:id="@+id/resolution_new_activity_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="CREATE"
+        app:layout_constraintBottom_toBottomOf="@+id/resolution_new_activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/resolution_new_activity"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

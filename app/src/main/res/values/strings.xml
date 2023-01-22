@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">JustPlanIt</string>
+    <string name="title_home">Home</string>
+    <string name="title_progress">Progress</string>
+    <string name="title_achievements">Achievements</string>
+    <string name="home_resolution_text">Your current resolutions:</string>
+    <string name="home_resolution_create">NEW RESOLUTION</string>
+    <string name="progress_header">View your progress:</string>
+    <string name="resolution_header">Create a new resolution:</string>
+    <string name="note">Note:</string>
+    <string name="save">SAVE</string>
+    <string name="name">Name:</string>
+    <string name="activity_col">Activity:</string>
+    <string name="date_starting">Starting date:</string>
+    <string name="frequency">Frequency:</string>
+    <string name="goal">Goal:</string>
+    <string name="active_since">Active since:</string>
+    <string name="progress_add">ADD PROGRESS:</string>
+    <string name="resolution_end">END RESOLUTION</string>
+    <string name="add">ADD</string>
+    <string name="date">Date</string>
+    <string name="amount">Amount</string>
+    <string name="activity">Activity</string>
+    <string name="save_note">SAVE NOTE</string>
+
+</resources>
