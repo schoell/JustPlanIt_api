@@ -20,6 +20,6 @@ object MessageApi {
 }
 
 interface MessageApiService {
-    @GET("/lessons")
-    fun lessons(): Call<List<slip>>
+    @GET("/advice")
+    fun advice(): Call<List<slip>>
 }

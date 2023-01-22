@@ -1,6 +1,7 @@
 package com.example.justplanit.ui.home
 
 import android.content.Intent
+import android.icu.util.Calendar
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -54,7 +55,8 @@ class HomeFragment : Fragment() {
             },
             error = {
                 Log.w("Error", it)
-                motd.text = "Never run a marathon in Crocs."
+                val day = Calendar.getInstance().get(Calendar.DAY_OF_MONTH)-1
+                motd.text = MessageRepository.messages[day].advice
             }
         )
 
